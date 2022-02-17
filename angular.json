@@ -3,5 +3,135 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "rad": {
+      "projectType": "library",
+      "root": "projects/rad",
+      "sourceRoot": "projects/rad/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/rad/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rad/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/rad/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rad/src/test.ts",
+            "tsConfig": "projects/rad/tsconfig.spec.json",
+            "karmaConfig": "projects/rad/karma.conf.js"
+          }
+        }
+      }
+    },
+    "rad-test": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/rad-test",
+      "sourceRoot": "projects/rad-test/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/rad-test",
+            "index": "projects/rad-test/src/index.html",
+            "main": "projects/rad-test/src/main.ts",
+            "polyfills": "projects/rad-test/src/polyfills.ts",
+            "tsConfig": "projects/rad-test/tsconfig.app.json",
+            "assets": [
+              "projects/rad-test/src/favicon.ico",
+              "projects/rad-test/src/assets"
+            ],
+            "styles": [
+              "projects/rad-test/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/rad-test/src/environments/environment.ts",
+                  "with": "projects/rad-test/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "rad-test:build:production"
+            },
+            "development": {
+              "browserTarget": "rad-test:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "rad-test:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rad-test/src/test.ts",
+            "polyfills": "projects/rad-test/src/polyfills.ts",
+            "tsConfig": "projects/rad-test/tsconfig.spec.json",
+            "karmaConfig": "projects/rad-test/karma.conf.js",
+            "assets": [
+              "projects/rad-test/src/favicon.ico",
+              "projects/rad-test/src/assets"
+            ],
+            "styles": [
+              "projects/rad-test/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "rad"
 }
