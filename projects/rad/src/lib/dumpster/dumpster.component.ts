@@ -3,12 +3,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'rad-dumpster',
-  template: `
-    <p>
-    Dumpster
-    </p>
-  `,
-  styles: [
+  templateUrl: './dumpster.components.html',
+  styleUrls: [
+    './dumpster.components.css'
   ]
 })
 export class RadDumpster implements OnInit {
