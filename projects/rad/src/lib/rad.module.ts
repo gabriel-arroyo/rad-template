@@ -8,7 +8,10 @@ import { RadNavbar } from './navbar/navbar.component'
 import { RadQuote } from './quote/quote.component'
 import { RadQuotebar } from './quotebar/quotebar.component'
 import { RadRegister } from './register/register.component'
-
+import { RadCover } from './cover/cover.component'
+import { RadWarning } from './warning/warning.component'
+import { RadProcess } from './process/process.component'
+import { RadProcessItem } from './process-item/process-item.component';
 
 
 @NgModule({
@@ -22,6 +25,10 @@ import { RadRegister } from './register/register.component'
     RadQuote,
     RadQuotebar,
     RadRegister,
+    RadCover,
+    RadWarning,
+    RadProcess,
+    RadProcessItem,
   ],
   imports: [
   ],
@@ -35,6 +42,10 @@ import { RadRegister } from './register/register.component'
     RadQuote,
     RadQuotebar,
     RadRegister,
+    RadCover,
+    RadWarning,
+    RadProcess,
+    RadProcessItem,
   ]
 })
 export class RadModule { }

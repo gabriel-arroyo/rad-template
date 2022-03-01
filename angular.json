@@ -54,6 +54,11 @@
             "polyfills": "projects/rad-test/src/polyfills.ts",
             "tsConfig": "projects/rad-test/tsconfig.app.json",
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "./node_modules/rad/assets",
+                "output": "/assets/"
+              },
               "projects/rad-test/src/favicon.ico",
               "projects/rad-test/src/assets"
             ],
