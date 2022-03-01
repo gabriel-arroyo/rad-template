@@ -11,15 +11,16 @@
   height: 17px;
   top: 0;
   padding: 35px 16px;
-  background: #42a5f5;
-  padding-right: 200px;
+  background: #ffffff;
+  padding-right: 10%;
+  border: 1px solid #cdcdcd;
 }
 .nav__item {
   margin: 5px;
   padding: 18px 8px;
   line-height: 16px;
   display: inline-block;
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   font-weight: lighter;
   font-size: 18px;
   font-family: "Gotham Black";
