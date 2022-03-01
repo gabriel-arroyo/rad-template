@@ -1,8 +1,14 @@
 <nav class="nav">
   <img src="{{ logo }}" alt="logo" />
   <ul class="nav__list">
-    <li class="nav__item">Home</li>
-    <li class="nav__item">Why Us</li>
-    <li class="nav__item">FAQ</li>
+    <li class="nav__item" [class.active]="selected === 0" (click)="select(0)">
+      Home
+    </li>
+    <li class="nav__item" [class.active]="selected === 1" (click)="select(1)">
+      Why Us
+    </li>
+    <li class="nav__item" [class.active]="selected === 2" (click)="select(2)">
+      Our Dumpsters
+    </li>
   </ul>
 </nav>
