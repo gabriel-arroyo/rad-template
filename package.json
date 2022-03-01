@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "radbuild": "ng build rad",
-    "radwatch": "ng build rad --watch"
+    "radwatch": "ng build rad --watch",
+    "build-all": "ng build rad && ng build"
 
   },
   "private": true,

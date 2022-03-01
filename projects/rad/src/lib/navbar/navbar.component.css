@@ -3,28 +3,42 @@
   src: local("Gotham Black Regular"),
     url("../../assets/fonts/Gotham Black Regular.ttf") format("truetype");
 }
-.nav {
-  position: sticky;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 17px;
-  top: 0;
-  padding: 35px 16px;
-  background: #42a5f5;
-  padding-right: 200px;
-}
-.nav__item {
-  margin: 5px;
-  padding: 18px 8px;
-  line-height: 16px;
-  display: inline-block;
-  color: aliceblue;
-  font-weight: lighter;
-  font-size: 18px;
-  font-family: "Gotham Black";
-}
 
-img {
-  margin: 15px;
+
+.main-header {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  width: 100%;
+}
+.main-header .lower-header {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0px 0px;
+  background: #ffffff;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+}
+.main-header .lower-header .outer-box {
+  position: relative;
+  padding: 0px 80px 0px 0px;
+}
+.main-header .lower-header .logo {
+  position: relative;
+  float: left;
+  padding: 10px 0px;
+}
+.fixed-header .lower-header .logo {
+  padding: 0px !important;
+}
+.main-header .lower-header .logo img {
+  display: inline-block;
+  max-width: 100%;
 }

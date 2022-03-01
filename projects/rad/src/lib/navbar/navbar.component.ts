@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'rad-navbar',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class RadNavbar implements OnInit {
+  @Input() logo: string = '';
 
   constructor() { }
 
