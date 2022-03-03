@@ -1,58 +1,28 @@
-<h1>Contact</h1>
-  <div class="container">
-    <div class="content">
-      <div class="left-side">
-        <div class="address details">
-          <i class="fas fa-map-marker-alt"></i>
-          <div class="text-one">Address</div>
-          <div class="text-one">Surkhet, NP12</div>
-          <div class="text-two">Birendranagar 06</div>
-        </div>
-        <div class="phone details">
-          <i class="fas fa-phone-alt"></i>
-          <div class="text-one">Phone</div>
-          <div class="text-one">+0098 9893 5647</div>
-          <div class="text-two">+0096 3434 5678</div>
-        </div>
-        <div class="email details">
-          <i class="fas fa-envelope"></i>
-          <div class="text-one">Email</div>
-          <div class="text-one">codinglab@gmail.com</div>
-          <div class="text-two">info.codinglab@gmail.com</div>
-        </div>
-        <div class="email details">
-          <i class="fas fa-envelope"></i>
-          <div class="text-one">Email</div>
-          <div class="text-one">codinglab@gmail.com</div>
-          <div class="text-two">info.codinglab@gmail.com</div>
-        </div>
-        <div class="email details">
-          <i class="fas fa-envelope"></i>
-          <div class="text-one">Email</div>
-          <div class="text-one">codinglab@gmail.com</div>
-          <div class="text-two">info.codinglab@gmail.com</div>
-        </div>
-      </div>
-    <div class="right-side">
-      <form action="#">
-        <div class="input-box">
-          <input type="text" placeholder="Enter your name">
-        </div>
-        <div class="input-box">
-          <input type="text" placeholder="Enter your email">
-        </div>
-        <div class="input-box">
-          <input type="text message message-box" placeholder="Enter your mesage">
-        </div>
-        <div class="input-box message-box">
-        </div>
-        <div class="button">
-          <input type="button" value="Send Now" >
-        </div>
-        <div class="button">
-          <input type="button" value="Chat" >
-        </div>
-      </form>
-    </div>
-    </div>
+<div class="contact">
+  <div class="info">
+    <div class="contact-title">Contact Us</div>
+    <div class="data">4237 Livernois</div>
+    <div class="data">Detroit, MI 48210</div>
+    <br>
+    <div class="data">Phone: 313-999-1352</div>
+    <div class="data">Spanish:313-7722-0000</div>
+    <div class="data">Fax:313-586-9901</div>
+    <div class="data">Email:radumpster@gmail.com</div>
   </div>
+  <div class="container">
+    <form >
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="subject">Message</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+      <button class="chat-button" value="Chat" (click)="toggle($event)">Chat</button>
+      <div *ngIf="showChat" class="chat"></div>
+    </form>
+  </div>
+</div>

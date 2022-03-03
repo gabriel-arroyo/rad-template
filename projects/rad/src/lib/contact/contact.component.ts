@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class RadContact implements OnInit {
+  showChat: boolean = false;
 
   constructor() { }
+
+  toggle(e:any){
+    e.preventDefault();
+    this.showChat = !this.showChat;
+  }
 
   ngOnInit(): void {
   }

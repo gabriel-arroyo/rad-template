@@ -10,4 +10,7 @@ export class QuotepageComponent implements OnInit {
   constructor() {}
 
 ngOnInit():void{}
+
+
+
 }
