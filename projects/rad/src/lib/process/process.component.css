@@ -1,13 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@font-face {
+  font-family: "Gotham Black Regular";
+  src: url('../../../assets/fonts/Gotham Black Regular.ttf');
+}
 
 .container {
-  display: flex;
-  justify-content: space-around;
-  margin-left: 10%;
-  margin-right: 10%;
+display: flex;
+    margin-left: 23%;
+    margin-right: 17%;
+    justify-content: space-around;
 }
 h1 {
   text-align: center;
-  margin: 1.5em;
-  font-family: "Roboto";
+  margin: 1.8em;
+  padding-bottom:.5em;
+  font-family: 'Gotham Black Regular', sans-serif;
+  text-transform: uppercase;
+}
+
+.row1{
+  display:flex;
+  flex-direction:row;
+}
+
+.spacer {
+  width: 100%;
+  height: 10vh;
+  padding: 40px;
 }

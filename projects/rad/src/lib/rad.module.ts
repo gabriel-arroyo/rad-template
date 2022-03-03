@@ -12,7 +12,7 @@ import { RadCover } from './cover/cover.component'
 import { RadWarning } from './warning/warning.component'
 import { RadProcess } from './process/process.component'
 import { RadProcessItem } from './process-item/process-item.component';
-
+import { RadContact } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,7 @@ import { RadProcessItem } from './process-item/process-item.component';
     RadWarning,
     RadProcess,
     RadProcessItem,
+    RadContact,
   ],
   imports: [
   ],
@@ -46,6 +47,7 @@ import { RadProcessItem } from './process-item/process-item.component';
     RadWarning,
     RadProcess,
     RadProcessItem,
+    RadContact,
   ]
 })
 export class RadModule { }

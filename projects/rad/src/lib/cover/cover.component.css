@@ -15,18 +15,18 @@
   width: 100%;
 }
 .logo {
-  position: absolute;
-  height: 120px;
-  z-index: 2;
-  left: 50%;
-  margin-left: -180px;
-  top: 45%;
-  margin-top: -50px;
+    position: absolute;
+    height: 140px;
+    z-index: 2;
+    left: 46%;
+    margin-left: -180px;
+    top: 44%;
+    margin-top: -50px;
 }
 .contact {
   position: absolute;
   z-index: 2;
-  height: 20%;
+  height: 5%;
   left: 50%;
   margin-left: -40px;
   top: 50%;
